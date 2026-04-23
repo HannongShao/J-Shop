@@ -1,0 +1,43 @@
+{
+  "current": {
+    "sections": {},
+    "content_for_index": [],
+    "settings": {
+      "brand_tagline": "Jewellery for everyday confidence",
+      "global_shipping_note": "Free shipping over AU$149",
+      "contact_email": "hello@example.com",
+      "contact_phone": "+61 400 000 000",
+      "contact_instagram": "southernlightjewellery",
+      "enable_search": true,
+      "enable_locale_selector": true,
+      "enable_market_selector": true,
+      "color_background": "#f6f1ea",
+      "color_surface": "#fffdf9",
+      "color_text": "#2f2b28",
+      "color_muted": "#736b63",
+      "color_accent": "#b49362",
+      "color_soft": "#d8d1c5"
+    }
+  },
+  "presets": {
+    "Default": {
+      "settings": {
+        "brand_tagline": "Jewellery for everyday confidence",
+        "global_shipping_note": "Free shipping over AU$149",
+        "contact_email": "hello@example.com",
+        "contact_phone": "+61 400 000 000",
+        "contact_instagram": "southernlightjewellery",
+        "enable_search": true,
+        "enable_locale_selector": true,
+        "enable_market_selector": true,
+        "color_background": "#f6f1ea",
+        "color_surface": "#fffdf9",
+        "color_text": "#2f2b28",
+        "color_muted": "#736b63",
+        "color_accent": "#b49362",
+        "color_soft": "#d8d1c5"
+      }
+    }
+  }
+}
+

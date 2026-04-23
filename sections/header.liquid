@@ -1,0 +1,73 @@
+{%- assign header_tagline = settings.brand_tagline -%}
+{%- if header_tagline == blank -%}
+  {%- assign header_tagline = 'header.tagline_fallback' | t -%}
+{%- endif -%}
+
+<header class="site-header">
+  <div class="page-width header__inner">
+    <button class="icon-button header__menu-toggle" type="button" aria-label="{{ 'general.menu' | t }}" data-drawer-toggle="mobile-menu">
+      {% render 'icon', icon: 'menu' %}
+    </button>
+
+    <a class="header__brand" href="{{ routes.root_url }}">
+      <span class="header__brand-name">{{ shop.name }}</span>
+      <span class="header__tagline">{{ header_tagline }}</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Primary">
+      <ul class="header__nav-list">
+        {%- for link in section.settings.menu.links -%}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      {%- if settings.enable_search -%}
+        <a class="icon-button" href="{{ routes.search_url }}" aria-label="{{ 'general.search' | t }}">
+          {% render 'icon', icon: 'search' %}
+        </a>
+      {%- endif -%}
+      <a class="icon-button" href="{{ routes.cart_url }}" aria-label="{{ 'general.cart' | t }}">
+        {% render 'icon', icon: 'cart' %}
+      </a>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__panel">
+      <div class="header__inner">
+        <span class="header__brand-name">{{ shop.name }}</span>
+        <button class="icon-button" type="button" aria-label="{{ 'general.close' | t }}" data-drawer-close>
+          {% render 'icon', icon: 'close' %}
+        </button>
+      </div>
+      <nav aria-label="Mobile">
+        <ul class="footer__menu">
+          {%- for link in section.settings.menu.links -%}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+      <div class="section-shell">
+        {% render 'locale-switcher' %}
+        {% render 'market-switcher' %}
+      </div>
+    </div>
+    <div class="mobile-drawer__overlay" data-drawer-close></div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

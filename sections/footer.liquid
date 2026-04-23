@@ -1,0 +1,71 @@
+{%- assign footer_tagline = settings.brand_tagline -%}
+{%- if footer_tagline == blank -%}
+  {%- assign footer_tagline = 'header.tagline_fallback' | t -%}
+{%- endif -%}
+
+<footer class="site-footer">
+  <div class="page-width footer__grid">
+    <div>
+      <h2 class="product__title">{{ shop.name }}</h2>
+      <p class="section-header__text">{{ footer_tagline }}</p>
+      <div class="footer__meta">
+        {%- if settings.contact_email != blank -%}
+          <a class="badge" href="mailto:{{ settings.contact_email }}">
+            {% render 'icon', icon: 'mail' %}
+            <span>{{ settings.contact_email }}</span>
+          </a>
+        {%- endif -%}
+        {%- if settings.contact_instagram != blank -%}
+          <span class="badge">
+            {% render 'icon', icon: 'sparkle' %}
+            <span>@{{ settings.contact_instagram }}</span>
+          </span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <h3>{{ 'footer.help' | t }}</h3>
+        <ul class="footer__menu">
+          {%- for link in section.settings.help_menu.links -%}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div>
+        <h3>{{ 'footer.contact' | t }}</h3>
+        <ul class="footer__menu">
+          {%- for link in section.settings.shop_menu.links -%}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {% render 'locale-switcher' %}
+      {% render 'market-switcher' %}
+    </div>
+  </div>
+
+  <div class="page-width footer__inner">
+    <small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ 'footer.copyright' | t }}</small>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "help_menu",
+      "label": "Help menu",
+      "default": "footer"
+    },
+    {
+      "type": "link_list",
+      "id": "shop_menu",
+      "label": "Shop menu"
+    }
+  ]
+}
+{% endschema %}

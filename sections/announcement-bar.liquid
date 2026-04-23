@@ -1,0 +1,37 @@
+{%- assign announcement_text = section.settings.text | default: settings.global_shipping_note -%}
+{%- if announcement_text != blank -%}
+  <div class="announcement-bar">
+    <div class="page-width announcement-bar__inner">
+      <span>{{ announcement_text }}</span>
+      {%- if section.settings.link_url != blank and section.settings.link_label != blank -%}
+        <a href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Free shipping over AU$149"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,51 @@
+<section class="section-shell">
+  <div class="page-width">
+    <div class="section-header">
+      <h1 class="page-title">{{ page.title | default: section.settings.heading }}</h1>
+      <div class="section-header__text">{{ section.settings.text }}</div>
+    </div>
+    <div class="grid grid--3">
+      <article class="card">
+        <div class="card__content">
+          <p class="badge">{% render 'icon', icon: 'mail' %}<span>{{ 'footer.email' | t }}</span></p>
+          <p><a href="mailto:{{ settings.contact_email }}">{{ settings.contact_email }}</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__content">
+          <p class="badge">{% render 'icon', icon: 'truck' %}<span>{{ 'footer.phone' | t }}</span></p>
+          <p>{{ settings.contact_phone }}</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__content">
+          <p class="badge">{% render 'icon', icon: 'sparkle' %}<span>{{ 'footer.instagram' | t }}</span></p>
+          <p>@{{ settings.contact_instagram }}</p>
+        </div>
+      </article>
+    </div>
+    {%- if page.content != blank -%}
+      <div class="page-copy rte">{{ page.content }}</div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact panel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "We are here to help"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this page to handle customer care, shipping questions, gifting support, and bilingual enquiries.</p>"
+    }
+  ]
+}
+{% endschema %}

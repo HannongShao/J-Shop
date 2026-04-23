@@ -1,0 +1,28 @@
+{%- assign item = product_card_product | default: product -%}
+{%- if item != blank -%}
+  <article class="card product-card">
+    <a href="{{ item.url }}" class="product-card__image">
+      {%- if item.featured_image != blank -%}
+        {{
+          item.featured_image
+          | image_url: width: 900
+          | image_tag:
+            widths: '320, 480, 640, 900',
+            loading: 'lazy',
+            alt: item.featured_image.alt | default: item.title
+        }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </a>
+    <div class="card__content">
+      <h3 class="product-card__title">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      </h3>
+      {%- if item.metafields.custom.short_blurb.value != blank -%}
+        <p class="section-header__text">{{ item.metafields.custom.short_blurb.value }}</p>
+      {%- endif -%}
+      {% render 'price', price_product: item %}
+    </div>
+  </article>
+{%- endif -%}

@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product"
+    },
+    "faq": {
+      "type": "faq-list",
+      "settings": {
+        "heading": "Delivery, returns, and care"
+      }
+    }
+  },
+  "order": ["main", "faq"]
+}
+

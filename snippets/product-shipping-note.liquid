@@ -1,0 +1,13 @@
+{%- capture shipping_content -%}
+  <div class="page-copy">
+    {%- if product.metafields.custom.shipping_note.value != blank -%}
+      <p>{{ product.metafields.custom.shipping_note.value }}</p>
+    {%- elsif section_shipping_copy != blank -%}
+      <p>{{ section_shipping_copy }}</p>
+    {%- else -%}
+      <p>Standard and express shipping details can be configured here, with clear delivery and return expectations for Australian customers.</p>
+    {%- endif -%}
+  </div>
+{%- endcapture -%}
+{% render 'product-accordion-item', title: 'products.product.shipping_returns' | t, content: shipping_content %}
+

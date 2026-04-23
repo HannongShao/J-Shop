@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f1e7">
+    <title>Southern Light Jewellery Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./preview.css">
+    <script src="./preview.js" defer></script>
+  </head>
+  <body data-page="preview-home" data-lens="gift">
+    <!-- Ambient interface layers -->
+    <div class="cursor-aura" aria-hidden="true"></div>
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+    <div class="page-glow page-glow--three" aria-hidden="true"></div>
+    <div class="page-grain" aria-hidden="true"></div>
+
+    <div class="scroll-rail" aria-hidden="true">
+      <span class="scroll-rail__line"></span>
+      <span class="scroll-rail__progress" data-scroll-progress></span>
+    </div>
+
+    <div class="section-indicator" aria-hidden="true">
+      <span class="section-indicator__label">Now browsing</span>
+      <strong class="section-indicator__value" data-section-indicator>Opening mood</strong>
+    </div>
+
+    <div class="notice-bar" data-component="notice-bar">
+      <div class="shell">
+        <span>Free shipping over AU$149</span>
+        <a href="#featured">Shop now</a>
+      </div>
+    </div>
+
+    <!-- Global header -->
+    <header class="site-header" id="top" data-component="site-header">
+      <div class="shell header-shell header-row">
+        <a class="brand" href="#hero" aria-label="Southern Light Jewellery homepage">
+          <span class="brand__crest" aria-hidden="true">SL</span>
+          <span class="brand__name">Southern Light Jewellery</span>
+          <span class="brand__tagline">Jewellery for everyday confidence</span>
+        </a>
+
+        <div class="header-center">
+          <span class="header-kicker">Australia-wide gifting and aftercare</span>
+          <nav class="nav" aria-label="Primary">
+            <a href="#gift-finder" data-nav-panel="gift" data-nav-key="gift-finder" aria-haspopup="true" aria-expanded="false">Gift Finder</a>
+            <a href="#collections" data-nav-panel="collections" data-nav-key="collections" aria-haspopup="true" aria-expanded="false">Collections</a>
+            <a href="#featured" data-nav-panel="bestsellers" data-nav-key="best-sellers" aria-haspopup="true" aria-expanded="false">Best Sellers</a>
+            <a href="#story" data-nav-panel="materials" data-nav-key="materials" aria-haspopup="true" aria-expanded="false">Materials</a>
+            <a href="#newsletter" data-nav-key="newsletter">Newsletter</a>
+          </nav>
+        </div>
+
+        <div class="header-actions">
+          <div class="header-trust">
+            <span>Gift-ready in 48h</span>
+            <span>Care support included</span>
+          </div>
+          <a class="header-cta" href="#gift-finder">Book the right piece</a>
+        </div>
+      </div>
+
+      <div class="shell header-shell header-panel-wrap">
+        <div class="header-panel" data-component="header-panel" data-header-panel aria-hidden="true">
+          <div class="header-panel__eyebrow" data-panel-eyebrow>Guided gifting</div>
+          <div class="header-panel__grid">
+            <div class="header-panel__copy">
+              <h3 data-panel-title>Choose a piece with less second-guessing</h3>
+              <p data-panel-copy>Start with budget, occasion, and style mood to arrive at a piece that feels considered from the first click.</p>
+            </div>
+            <div class="header-panel__links" data-panel-links>
+              <a href="#gift-finder">Birthday favourites</a>
+              <a href="#gift-finder">Anniversary keepsakes</a>
+              <a href="#gift-finder">Self-reward picks</a>
+            </div>
+            <div class="header-panel__meta" data-panel-meta>
+              <span>Gift note included</span>
+              <span>Low-risk suggestions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Narrative homepage sections -->
+    <main class="site-main" data-component="site-main">
+      <section id="hero" class="hero shell page-section" data-component="hero" data-section-title="Opening mood">
+        <div class="hero__copy reveal-item is-visible" data-reveal>
+          <p class="eyebrow">Australian-first everyday jewellery</p>
+          <h1>Gifted with certainty. Worn with feeling. Remembered for longer.</h1>
+          <p class="lede">
+            为送礼、自购和重要场合打造的精致珠宝体验，从真人佩戴比例、材质透明说明到长期保养关系，都以减少犹豫和提升信任为核心。
+          </p>
+
+          <div class="hero-lens">
+            <span class="hero-lens__label">View through</span>
+            <div class="lens-toggle" role="group" aria-label="Shopping intent">
+              <button class="lens-toggle__button is-active" type="button" data-lens-toggle="gift" aria-pressed="true">Gifting</button>
+              <button class="lens-toggle__button" type="button" data-lens-toggle="self" aria-pressed="false">Self purchase</button>
+              <button class="lens-toggle__button" type="button" data-lens-toggle="occasion" aria-pressed="false">Occasion</button>
+            </div>
+            <p class="lens-toggle__note" data-lens-caption>Focus the page around gifting clarity and low-risk first purchases.</p>
+          </div>
+
+          <div class="hero__meta">
+            <span class="meta-chip">Gift-ready packaging</span>
+            <span class="meta-chip">Australia-first experience</span>
+            <span class="meta-chip">Transparent materials</span>
+            <span class="meta-chip">Real-wear imagery</span>
+          </div>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#featured">Shop Best Sellers</a>
+            <a class="button button--secondary" href="#collections">Shop Gift Edits</a>
+          </div>
+
+          <div class="hero__foot">
+            <p class="hero__note" data-lens-note>Designed to reduce hesitation for birthdays, thank-you gestures, and first-time jewellery buyers.</p>
+
+            <div class="hero-stat-row">
+              <article class="hero-stat card card--soft reveal-item" data-reveal>
+                <span class="hero-stat__value">48h</span>
+                <p>Dispatch rhythm for ready-to-ship edits</p>
+              </article>
+              <article class="hero-stat card card--soft reveal-item" data-reveal>
+                <span class="hero-stat__value">2</span>
+                <p>Primary entry paths: gifting and everyday self-purchase</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-hero-visual>
+          <figure class="hero-shot hero-shot--main floating-card reveal-item" data-reveal>
+            <img src="../assets/generated/model-portrait-necklace.png" alt="真人模特佩戴金色项链、戒指与珍珠耳饰的首页主视觉图">
+          </figure>
+          <figure class="hero-shot hero-shot--detail floating-card reveal-item" data-reveal>
+            <img src="../assets/generated/model-hand-ring-bracelet.png" alt="真人手部佩戴钻戒与细手链的细节图">
+          </figure>
+
+          <aside class="hero-panel card card--soft floating-card reveal-item" data-reveal>
+            <span class="pill pill--soft" data-lens-pill>Gift-ready focus</span>
+            <p data-lens-copy>首屏优先讲清楚礼物包装、低出错率和澳洲配送安心感，再把用户自然带进爆款区。</p>
+            <div class="hero-panel__proof">
+              <strong>Seen on skin, not only on white backdrops</strong>
+              <span>真人佩戴图优先解决比例感、肤色适配和送礼想象成本。</span>
+            </div>
+          </aside>
+
+          <div class="hero-badge hero-badge--top reveal-item" data-reveal>Editorial softness</div>
+          <div class="hero-badge hero-badge--bottom reveal-item" data-reveal>Material clarity</div>
+        </div>
+      </section>
+
+      <section class="moment-ribbon" data-component="moment-ribbon" aria-label="Brand cues">
+        <div class="moment-ribbon__track">
+          <span>Gift-ready packaging</span>
+          <span>Australian dispatch clarity</span>
+          <span>Everyday layering</span>
+          <span>Transparent materials</span>
+          <span>Bilingual-ready structure</span>
+          <span>Calm premium experience</span>
+          <span>Gift-ready packaging</span>
+          <span>Australian dispatch clarity</span>
+          <span>Everyday layering</span>
+          <span>Transparent materials</span>
+          <span>Bilingual-ready structure</span>
+          <span>Calm premium experience</span>
+        </div>
+      </section>
+
+      <section class="trust-section shell section page-section" id="trust" data-component="trust-signals" data-section-title="Trust design">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Trust first</p>
+            <h2>Build purchase confidence before asking for the click</h2>
+            <p>高客单珠宝的第一任务不是催促下单，而是先把配送、包装、材质和保养说明讲清楚，让决定本身变得更轻松。</p>
+          </div>
+          <span class="section-number">01</span>
+        </div>
+
+        <div class="trust-grid">
+          <article class="card trust-card reveal-item" data-reveal>
+            <span class="trust-card__index">01</span>
+            <span class="pill pill--soft">Australia shipping</span>
+            <h3>Clear delivery promises</h3>
+            <p>首页把标准配送、加急配送、送礼时间窗口说明清楚，能明显减少用户最后一步的犹豫。</p>
+            <div class="card-ledger">
+              <span>Dispatch clarity</span>
+              <span>AU support</span>
+            </div>
+          </article>
+
+          <article class="card trust-card reveal-item" data-reveal>
+            <span class="trust-card__index">02</span>
+            <span class="pill pill--soft">Gift ready</span>
+            <h3>Gifting confidence</h3>
+            <p>礼盒、贺卡和“送礼不容易出错”的推荐逻辑，会成为第一阶段非常实用的转化抓手。</p>
+            <div class="card-ledger">
+              <span>Signature box</span>
+              <span>Gift note</span>
+            </div>
+          </article>
+
+          <article class="card trust-card reveal-item" data-reveal>
+            <span class="trust-card__index">03</span>
+            <span class="pill pill--soft">Material clarity</span>
+            <h3>Transparent details</h3>
+            <p>材质、镀层、宝石、敏感肌提示和保养建议要写得像服务，不是参数堆砌。</p>
+            <div class="card-ledger">
+              <span>Metal notes</span>
+              <span>Care clarity</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="signature-grid">
+          <article class="signature-card card card--soft reveal-item" data-reveal>
+            <span class="pill pill--soft">01 Jewellery Passport</span>
+            <h3>每件主推款都有可追踪的数字护照</h3>
+            <p>把材质、尺寸、保养、购买日期和赠礼寄语沉淀成品牌资产，而不是一次性的成交说明。</p>
+            <div class="card-ledger">
+              <span>Owned record</span>
+              <span>Gift memory</span>
+            </div>
+          </article>
+          <article class="signature-card card card--soft reveal-item" data-reveal>
+            <span class="pill pill--soft">02 Gift Concierge</span>
+            <h3>用轻量决策引导减少高客单犹豫</h3>
+            <p>比单纯分类页更像珠宝顾问，让送礼用户更快感到“这件不会送错”。</p>
+            <div class="card-ledger">
+              <span>Curated picks</span>
+              <span>Risk reduced</span>
+            </div>
+          </article>
+          <article class="signature-card card card--soft reveal-item" data-reveal>
+            <span class="pill pill--soft">03 Care Loop</span>
+            <h3>售后保养前置成品牌承诺</h3>
+            <p>把清洁、翻新、重新镀层和佩戴建议前置展示，提升高价购买的长期确定性。</p>
+            <div class="card-ledger">
+              <span>Annual refresh</span>
+              <span>Service promise</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="gift-finder" class="shell section page-section" data-component="gift-finder" data-section-title="Gift finder">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Gift finder</p>
+            <h2>Turn gifting uncertainty into a guided, premium recommendation moment</h2>
+            <p>这不是促销组件，而是一段更像珠宝顾问的引导体验，让用户在很短时间里找到更适合预算、场合和风格的选择。</p>
+          </div>
+          <span class="section-number">02</span>
+        </div>
+
+        <div class="gift-finder card card--soft reveal-item" data-reveal>
+          <div class="gift-finder__controls">
+            <div class="gift-group">
+              <span class="gift-group__label">Budget</span>
+              <div class="gift-options" role="group" aria-label="Budget">
+                <button class="gift-option is-active" type="button" data-gift-group="budget" data-gift-value="under-150">Under AU$150</button>
+                <button class="gift-option" type="button" data-gift-group="budget" data-gift-value="150-300">AU$150-300</button>
+                <button class="gift-option" type="button" data-gift-group="budget" data-gift-value="300-plus">AU$300+</button>
+              </div>
+            </div>
+
+            <div class="gift-group">
+              <span class="gift-group__label">Occasion</span>
+              <div class="gift-options" role="group" aria-label="Occasion">
+                <button class="gift-option is-active" type="button" data-gift-group="occasion" data-gift-value="birthday">Birthday</button>
+                <button class="gift-option" type="button" data-gift-group="occasion" data-gift-value="anniversary">Anniversary</button>
+                <button class="gift-option" type="button" data-gift-group="occasion" data-gift-value="self">Self reward</button>
+              </div>
+            </div>
+
+            <div class="gift-group">
+              <span class="gift-group__label">Style mood</span>
+              <div class="gift-options" role="group" aria-label="Style mood">
+                <button class="gift-option is-active" type="button" data-gift-group="style" data-gift-value="soft">Soft minimal</button>
+                <button class="gift-option" type="button" data-gift-group="style" data-gift-value="pearls">Pearl glow</button>
+                <button class="gift-option" type="button" data-gift-group="style" data-gift-value="evening">Evening shine</button>
+              </div>
+            </div>
+          </div>
+
+          <article class="gift-result tilt-card" data-component="gift-result" data-gift-result tabindex="0">
+            <div class="gift-result__media">
+              <span class="product-card__accent gift-result__accent">Concierge match</span>
+              <img src="../assets/generated/product-pearl-earrings.png" alt="礼物推荐结果示意图" data-gift-image>
+            </div>
+            <div class="gift-result__content">
+              <span class="pill" data-gift-pill>Most gift-safe pick</span>
+              <span class="gift-result__score">Match 94</span>
+              <h3 data-gift-title>Luna Pearl Earrings</h3>
+              <p data-gift-copy>适合生日和感谢礼物，光泽柔和、风险低、上耳轻盈，最适合作为第一份精致珠宝礼物。</p>
+              <div class="gift-result__meta">
+                <strong data-gift-price>AU$149</strong>
+                <span data-gift-note>Gift box, note card, and 48h dispatch available</span>
+              </div>
+              <ul class="gift-result__points" data-gift-points>
+                <li>Works across most wardrobes</li>
+                <li>Low sizing risk for gifting</li>
+                <li>Feels polished without feeling too formal</li>
+              </ul>
+              <div class="card-ledger card-ledger--soft">
+                <span>Gift box</span>
+                <span>Style guidance</span>
+                <span>Ready to send</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="featured" class="shell section page-section" data-component="featured-products" data-section-title="Hero products">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Best sellers</p>
+            <h2>Lead with hero products that feel easy to say yes to</h2>
+            <p>主推款负责建立第一印象，辅助款负责承接不同场景需求，让浏览顺序更自然，也更接近真实购买路径。</p>
+          </div>
+          <a class="section-link" href="#collections">Browse curated edits</a>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card product-card--feature tilt-card reveal-item" data-reveal tabindex="0">
+            <div class="product-card__image">
+              <span class="product-card__accent">Edition 01</span>
+              <img src="../assets/generated/product-pearl-earrings.png" alt="珍珠耳环产品图">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Gift friendly</span>
+              <h3>Luna Pearl Earrings</h3>
+              <p>柔和、轻盈、送礼难出错，适合做首页主推的低摩擦爆款。</p>
+              <ul class="product-card__details">
+                <li>Soft pearl drop silhouette</li>
+                <li>Easy first-purchase price band</li>
+                <li>Works for birthdays and thank-you gifts</li>
+              </ul>
+              <div class="card-ledger card-ledger--soft">
+                <span>Pearl glow</span>
+                <span>Gift-safe scale</span>
+              </div>
+              <div class="product-card__footer">
+                <strong>AU$149</strong>
+                <span>Pearl drop hoops</span>
+              </div>
+            </div>
+            <span class="product-card__cta">See the styling story</span>
+          </article>
+
+          <div class="product-stack">
+            <article class="product-card tilt-card reveal-item" data-reveal tabindex="0">
+              <div class="product-card__image">
+                <span class="product-card__accent">Edition 02</span>
+                <img src="../assets/generated/product-gold-necklace.png" alt="金色项链产品图">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Daily layering</span>
+                <h3>Solstice Chain Necklace</h3>
+                <p>适合日常佩戴与叠戴，是自购入口最稳定的单品类型之一。</p>
+                <div class="card-ledger card-ledger--soft">
+                  <span>Daylight tested</span>
+                  <span>Layering base</span>
+                </div>
+                <div class="product-card__footer">
+                  <strong>AU$179</strong>
+                  <span>Minimal pendant</span>
+                </div>
+              </div>
+              <span class="product-card__cta">Layering-first entry piece</span>
+            </article>
+
+            <article class="product-card tilt-card reveal-item" data-reveal tabindex="0">
+              <div class="product-card__image">
+                <span class="product-card__accent">Edition 03</span>
+                <img src="../assets/generated/product-diamond-ring.png" alt="钻戒产品图">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Occasion anchor</span>
+                <h3>Harbour Signet Ring</h3>
+                <p>更有场合感和品牌锚点属性，适合抬高整体视觉记忆与客单感知。</p>
+                <div class="card-ledger card-ledger--soft">
+                  <span>Milestone piece</span>
+                  <span>Evening focus</span>
+                </div>
+                <div class="product-card__footer">
+                  <strong>AU$199</strong>
+                  <span>Diamond focus piece</span>
+                </div>
+              </div>
+              <span class="product-card__cta">Sharper evening attitude</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="shell section page-section" data-component="collection-edits" data-section-title="Collection edits">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Shop by edit</p>
+            <h2>Use occasion-led paths instead of forcing shoppers to guess</h2>
+            <p>以送礼、自购和场合为主线组织系列，让用户更快判断这件珠宝适不适合她自己，或者适不适合她想赠送的人。</p>
+          </div>
+          <span class="section-number">03</span>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card collection-card--gift tilt-card reveal-item" data-reveal tabindex="0">
+            <div class="collection-card__body">
+              <span class="collection-card__serial">Edit 01</span>
+              <span class="pill">Gifts Under AU$150</span>
+              <h3>Gift-ready pieces that are hard to get wrong</h3>
+              <p>适合第一次购买、生日礼物和节日送礼场景，重点是降低选错风险和提高下单安心感。</p>
+              <div class="card-ledger card-ledger--soft">
+                <span>Gift-safe</span>
+                <span>Quick dispatch</span>
+                <span>Low sizing risk</span>
+              </div>
+              <div class="collection-card__footer">
+                <span>Birthday, thank-you, easy-win gifting</span>
+                <span class="collection-card__link">Explore the gift edit</span>
+              </div>
+            </div>
+            <div class="collection-card__media">
+              <img src="../assets/generated/product-pearl-earrings.png" alt="礼物专区珍珠耳环图">
+            </div>
+          </article>
+
+          <article class="collection-card collection-card--daily tilt-card reveal-item" data-reveal tabindex="0">
+            <div class="collection-card__body">
+              <span class="collection-card__serial">Edit 02</span>
+              <span class="pill">Everyday Edit</span>
+              <h3>Simple pieces for daily wear and layering</h3>
+              <p>把日常高频佩戴的轻精致款式集中起来，更适合澳洲女性自购主线。</p>
+              <div class="card-ledger card-ledger--soft">
+                <span>Layering core</span>
+                <span>Easy repeat wear</span>
+              </div>
+              <div class="collection-card__footer">
+                <span>Self-purchase, repeat wear, calm polish</span>
+                <span class="collection-card__link">See the daily edit</span>
+              </div>
+            </div>
+            <div class="collection-card__media">
+              <img src="../assets/generated/product-gold-necklace.png" alt="日常佩戴项链图">
+            </div>
+          </article>
+
+          <article class="collection-card collection-card--occasion tilt-card reveal-item" data-reveal tabindex="0">
+            <div class="collection-card__body">
+              <span class="collection-card__serial">Edit 03</span>
+              <span class="pill">Occasion Jewellery</span>
+              <h3>More polished styles for events, dinners, and special dates</h3>
+              <p>作为提升品牌锚点和客单价感知的区域，适合放更亮眼的环戒与成套组合。</p>
+              <div class="card-ledger card-ledger--soft">
+                <span>Event dressing</span>
+                <span>Statement finish</span>
+              </div>
+              <div class="collection-card__footer">
+                <span>Dinner, event, polished date-night energy</span>
+                <span class="collection-card__link">Step into occasion</span>
+              </div>
+            </div>
+            <div class="collection-card__media">
+              <img src="../assets/generated/product-diamond-ring.png" alt="场合型钻戒图">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="wear" class="shell section wear-section page-section" data-component="real-wear" data-section-title="Real-wear imagery">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Wear it in real life</p>
+            <h2>Show jewelry on skin, in motion, and at real scale</h2>
+            <p>真实佩戴图帮助用户在下单前判断比例、肤感和整体气质，让珠宝不只停留在白底图片里，而是真正进入生活场景。</p>
+          </div>
+          <span class="section-number">04</span>
+        </div>
+
+        <div class="wear-grid">
+          <article class="wear-card wear-card--portrait card reveal-item cursor-sheen" data-reveal data-sheen tabindex="0">
+            <div class="wear-card__media">
+              <img src="../assets/generated/model-portrait-necklace.png" alt="真人模特佩戴项链、耳饰与戒指的展示图">
+            </div>
+            <div class="wear-card__content">
+              <span class="pill pill--soft">Portrait styling</span>
+              <h3>Face, neckline, and light all read clearly</h3>
+              <p>让耳饰、项链和戒指同时出现在真实肤感里，帮助用户判断整体气质，而不是孤立地看单件产品。</p>
+              <div class="card-ledger card-ledger--soft">
+                <span>Neckline scale</span>
+                <span>Daylight skin tone</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="wear-card wear-card--detail card card--soft reveal-item cursor-sheen" data-reveal data-sheen tabindex="0">
+            <div class="wear-card__media">
+              <img src="../assets/generated/model-hand-ring-bracelet.png" alt="真人手部佩戴戒指与手链的近景图">
+            </div>
+            <div class="wear-card__content">
+              <span class="pill pill--soft">Hand focus</span>
+              <h3>Finger proportion and bracelet delicacy feel believable</h3>
+              <p>高端珠宝网站不应该只给白底特写，这种手部近景更能解决戒指比例、手链细度和日常佩戴想象。</p>
+              <div class="card-ledger card-ledger--soft">
+                <span>Finger scale</span>
+                <span>Bracelet lightness</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="wear-notes reveal-item" data-reveal>
+            <article class="wear-note card">
+              <span class="wear-note__label">Daylight test</span>
+              <p>每款主推品都建议至少拍一组自然光佩戴图，减少“实物比图弱”的反差。</p>
+            </article>
+            <article class="wear-note card">
+              <span class="wear-note__label">Gift confidence</span>
+              <p>真人图比白底图更适合送礼场景，因为它能传达佩戴后的气质和分寸感。</p>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="story" class="shell story section page-section" data-component="material-story" data-section-title="Material story">
+        <div class="story__visual">
+          <figure class="story__image story__image--main floating-card reveal-item" data-reveal>
+            <img src="../assets/generated/product-gold-necklace.png" alt="材质说明区项链图">
+          </figure>
+          <figure class="story__image story__image--detail floating-card reveal-item" data-reveal>
+            <img src="../assets/generated/product-pearl-earrings.png" alt="材质说明区耳饰图">
+          </figure>
+          <div class="story__stat card card--soft floating-card reveal-item" data-reveal>
+            <span class="pill pill--soft">Material transparency</span>
+            <p>Metal, size, shipping, and care details are presented with the same calm clarity as the design itself.</p>
+          </div>
+        </div>
+
+        <div class="story__copy reveal-item" data-reveal>
+          <p class="eyebrow">Material clarity</p>
+          <h2>Use this space to explain what customers are actually buying</h2>
+          <p>
+            金属、镀层、宝石、敏感肌提示、尺寸指南和保养建议都应该清晰分层，让信息读起来像服务，而不是像密集说明书。
+          </p>
+
+          <div class="story__chips">
+            <span class="meta-chip">Metal notes</span>
+            <span class="meta-chip">Sizing guidance</span>
+            <span class="meta-chip">Sensitive-skin info</span>
+            <span class="meta-chip">Care ritual</span>
+          </div>
+
+          <div class="story-points">
+            <article class="card story-point reveal-item" data-reveal>
+              <span class="story-point__kicker">01 Structured</span>
+              <h3>Structured product detail</h3>
+              <p>每个商品都以统一逻辑呈现材质、尺寸、配送与保养信息，让不同系列之间也保持稳定可信的阅读体验。</p>
+              <div class="card-ledger">
+                <span>Readable layers</span>
+                <span>Stable format</span>
+              </div>
+            </article>
+            <article class="card story-point reveal-item" data-reveal>
+              <span class="story-point__kicker">02 Bilingual</span>
+              <h3>Bilingual ready</h3>
+              <p>英文保持品牌气质，中文负责解释材质、尺寸和服务细节，让双语体验自然且易于理解。</p>
+              <div class="card-ledger">
+                <span>English tone</span>
+                <span>Chinese clarity</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section passport page-section" id="passport" data-component="jewelry-passport" data-section-title="Jewelry passport">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Jewelry passport</p>
+            <h2>Make ownership feel premium long after checkout</h2>
+            <p>珠宝护照让拥有体验延续到收货之后，把每件作品的材质、尺寸、保养和重要日期记录成更完整的品牌记忆。</p>
+          </div>
+          <span class="section-number">05</span>
+        </div>
+
+        <div class="passport-layout">
+          <article class="passport-card reveal-item cursor-sheen" data-reveal data-sheen tabindex="0">
+            <span class="passport-card__kicker">Digital certificate</span>
+            <h3>Southern Light Jewellery Passport</h3>
+            <ul class="passport-list">
+              <li>Material breakdown and plating details</li>
+              <li>Size profile and fit guidance</li>
+              <li>Care rhythm and annual refresh reminders</li>
+              <li>Gift note memory for important dates</li>
+            </ul>
+            <div class="passport-card__seal">
+              <span>Registered piece</span>
+              <strong>SL-0481</strong>
+            </div>
+          </article>
+
+          <div class="passport-benefits">
+            <article class="card reveal-item" data-reveal>
+              <span class="pill pill--soft">Aftercare edge</span>
+              <h3>保养和翻新提醒自然进入复购链路</h3>
+              <p>相比把保养说明埋在角落里，护照机制更像可持续服务，能自然承接清洁、翻新和再次送礼的需求。</p>
+              <div class="card-ledger">
+                <span>Refresh cycle</span>
+                <span>Care memory</span>
+              </div>
+            </article>
+            <article class="card reveal-item" data-reveal>
+              <span class="pill pill--soft">Premium proof</span>
+              <h3>高价商品需要被认真记录</h3>
+              <p>这类细节会让用户觉得你卖的是完整拥有体验，而不是普通饰品电商的“下单即结束”。</p>
+              <div class="card-ledger">
+                <span>Registered piece</span>
+                <span>Lasting value</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section reviews page-section" id="reviews" data-component="social-proof" data-section-title="Customer proof">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Social proof</p>
+            <h2>Specific feedback feels premium. Generic praise does not.</h2>
+            <p>真实反馈应该帮助用户感受到质感、佩戴体验和送礼结果，而不是停留在空泛的“好看”和“喜欢”。</p>
+          </div>
+          <span class="section-number">06</span>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card card reveal-item" data-reveal>
+            <p class="review-card__quote">“Gifted these to my sister and the whole experience felt considered, from the packaging to how softly they sat on the ear.”</p>
+            <div class="review-card__meta">
+              <span>Gifting</span>
+              <span>Comfort</span>
+            </div>
+            <span class="review-card__author">Verified gift customer</span>
+          </article>
+
+          <article class="review-card review-card--featured card reveal-item" data-reveal>
+            <p class="review-card__quote">“I appreciated knowing the metal finish, chain length, and care notes before ordering. It made the piece feel worth the spend.”</p>
+            <div class="review-card__meta">
+              <span>Material</span>
+              <span>Value</span>
+            </div>
+            <span class="review-card__author">Returning customer</span>
+          </article>
+
+          <article class="review-card card reveal-item" data-reveal>
+            <p class="review-card__quote">“The real-wear imagery helped me picture it immediately. It felt elegant, not overdone, and exactly right for everyday confidence.”</p>
+            <div class="review-card__meta">
+              <span>Real wear</span>
+              <span>Confidence</span>
+            </div>
+            <span class="review-card__author">Melbourne client</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell section ritual page-section" id="ritual" data-component="purchase-path" data-section-title="Purchase path">
+        <div class="section-heading section-heading--split reveal-item" data-reveal>
+          <div>
+            <p class="eyebrow">Purchase path</p>
+            <h2>Give the shopper a calm path from discovery to confidence</h2>
+            <p>从发现需求到确认材质，再到购买后的延续服务，每一步都应该自然衔接，让页面更像被仔细设计过的销售体验。</p>
+          </div>
+          <span class="section-number">07</span>
+        </div>
+
+        <div class="ritual-grid">
+          <article class="ritual-step card tilt-card reveal-item" data-reveal tabindex="0">
+            <span class="ritual-step__label">Entry 01</span>
+            <span class="ritual-step__number">01</span>
+            <h3>Discover the intent</h3>
+            <p>先按自购、送礼、场合三条路径组织内容，更接近真实决策而不是后台分类逻辑。</p>
+            <div class="card-ledger">
+              <span>Gift</span>
+              <span>Self</span>
+              <span>Occasion</span>
+            </div>
+          </article>
+
+          <article class="ritual-step card tilt-card reveal-item" data-reveal tabindex="0">
+            <span class="ritual-step__label">Entry 02</span>
+            <span class="ritual-step__number">02</span>
+            <h3>Clarify the product</h3>
+            <p>把材质、尺寸、配送、保养写清楚，等于提前处理用户最常见的反对意见。</p>
+            <div class="card-ledger">
+              <span>Metal</span>
+              <span>Size</span>
+              <span>Care</span>
+            </div>
+          </article>
+
+          <article class="ritual-step card tilt-card reveal-item" data-reveal tabindex="0">
+            <span class="ritual-step__label">Entry 03</span>
+            <span class="ritual-step__number">03</span>
+            <h3>Keep the brand warm</h3>
+            <p>邮件订阅、新品提醒和送礼灵感的语气都应该克制、柔和、长期可复购。</p>
+            <div class="card-ledger">
+              <span>Aftercare</span>
+              <span>New drops</span>
+              <span>Gift ideas</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="newsletter" class="shell newsletter section page-section" data-component="retention-newsletter" data-section-title="Retention">
+        <div class="newsletter__panel reveal-item is-visible" data-reveal>
+          <div class="newsletter__content">
+            <p class="eyebrow">Retention</p>
+            <h2>Keep the relationship going after the first visit</h2>
+            <p>以新品预览、送礼灵感和保养提醒维持关系，让第一次浏览之后的每一次接触都继续建立品牌温度。</p>
+
+            <div class="newsletter__points">
+              <span class="meta-chip">New arrivals</span>
+              <span class="meta-chip">Gift edits</span>
+              <span class="meta-chip">Care notes</span>
+            </div>
+
+            <p class="newsletter__aside">No loud discounts. Just calm updates, useful styling ideas, and thoughtful aftercare.</p>
+          </div>
+
+          <div class="newsletter__form-card">
+            <span class="newsletter__seal">Private list</span>
+            <p class="newsletter__microcopy">Subscribe for gentle drops, gifting ideas, and styling notes.</p>
+            <form class="newsletter-form">
+              <label class="visually-hidden" for="newsletter-email">Email address</label>
+              <input id="newsletter-email" type="email" placeholder="Email address">
+              <button class="button button--primary" type="button">Subscribe</button>
+            </form>
+            <div class="card-ledger card-ledger--soft">
+              <span>Early drops</span>
+              <span>Care letters</span>
+              <span>Soft invites</span>
+            </div>
+            <p class="newsletter__privacy">No noisy spam. Keep the tone calm, premium, and genuinely useful.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

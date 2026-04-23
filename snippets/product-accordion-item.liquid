@@ -1,0 +1,10 @@
+<div class="accordion__item">
+  <button class="accordion__trigger" type="button" aria-expanded="{% if open %}true{% else %}false{% endif %}" data-accordion-trigger>
+    <span>{{ title }}</span>
+    {% render 'icon', icon: 'chevron' %}
+  </button>
+  <div class="accordion__content" {% unless open %}hidden{% endunless %}>
+    {{ content }}
+  </div>
+</div>
+

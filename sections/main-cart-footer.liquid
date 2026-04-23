@@ -1,0 +1,26 @@
+{%- if cart.item_count > 0 -%}
+  <section class="section-shell">
+    <div class="page-width">
+      <div class="card">
+        <div class="card__content" style="display:flex; justify-content:space-between; gap: var(--space-4); flex-wrap: wrap;">
+          <div>
+            <p class="section-header__eyebrow">{{ 'sections.cart.subtotal' | t }}</p>
+            <h2 class="product__title">{{ cart.total_price | money }}</h2>
+          </div>
+          <div class="header__actions">
+            <a class="button button--secondary" href="{{ routes.all_products_collection_url }}">{{ 'general.continue_shopping' | t }}</a>
+            <form action="{{ routes.cart_url }}" method="post">
+              <button class="button button--primary" type="submit" name="checkout">{{ 'sections.cart.checkout' | t }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Main cart footer"
+}
+{% endschema %}

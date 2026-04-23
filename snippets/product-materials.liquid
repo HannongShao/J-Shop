@@ -1,0 +1,24 @@
+{%- capture materials_content -%}
+  <div class="page-copy">
+    {%- if product.metafields.custom.material_primary.value != blank
+      or product.metafields.custom.plating_info.value != blank
+      or product.metafields.custom.gemstone_type.value != blank
+    -%}
+      <ul>
+        {%- if product.metafields.custom.material_primary.value != blank -%}
+          <li>{{ product.metafields.custom.material_primary.value }}</li>
+        {%- endif -%}
+        {%- if product.metafields.custom.plating_info.value != blank -%}
+          <li>{{ product.metafields.custom.plating_info.value }}</li>
+        {%- endif -%}
+        {%- if product.metafields.custom.gemstone_type.value != blank -%}
+          <li>{{ product.metafields.custom.gemstone_type.value }}</li>
+        {%- endif -%}
+      </ul>
+    {%- else -%}
+      <p>Material details can be added through product metafields for metal, plating, and gemstone information.</p>
+    {%- endif -%}
+  </div>
+{%- endcapture -%}
+{% render 'product-accordion-item', title: 'products.product.materials' | t, content: materials_content %}
+

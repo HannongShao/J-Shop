@@ -1,0 +1,11 @@
+{%- capture size_content -%}
+  <div class="page-copy">
+    {%- if product.metafields.custom.size_chart.value != blank -%}
+      <p>{{ product.metafields.custom.size_chart.value }}</p>
+    {%- else -%}
+      <p>Add a size guide or fit notes through the product metafield to help customers choose with confidence.</p>
+    {%- endif -%}
+  </div>
+{%- endcapture -%}
+{% render 'product-accordion-item', title: 'products.product.size_guide' | t, content: size_content %}
+

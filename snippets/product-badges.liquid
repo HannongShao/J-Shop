@@ -1,0 +1,22 @@
+<div class="product__badges">
+  {%- if product.metafields.custom.gift_ready.value == true -%}
+    <span class="badge">
+      {% render 'icon', icon: 'gift' %}
+      <span>{{ 'products.product.gift_ready' | t }}</span>
+    </span>
+  {%- endif -%}
+
+  {%- if product.metafields.custom.skin_friendly_note.value != blank -%}
+    <span class="badge">
+      {% render 'icon', icon: 'sparkle' %}
+      <span>{{ product.metafields.custom.skin_friendly_note.value }}</span>
+    </span>
+  {%- endif -%}
+
+  {%- if settings.global_shipping_note != blank -%}
+    <span class="badge">
+      {% render 'icon', icon: 'truck' %}
+      <span>{{ settings.global_shipping_note }}</span>
+    </span>
+  {%- endif -%}
+</div>

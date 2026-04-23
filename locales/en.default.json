@@ -1,0 +1,81 @@
+{
+  "accessibility": {
+    "skip_to_content": "Skip to content"
+  },
+  "general": {
+    "menu": "Menu",
+    "close": "Close",
+    "search": "Search",
+    "cart": "Cart",
+    "view_all": "View all",
+    "continue_shopping": "Continue shopping"
+  },
+  "announcement": {
+    "shop_now": "Shop now"
+  },
+  "header": {
+    "tagline_fallback": "Thoughtfully designed pieces for gifting and daily wear"
+  },
+  "footer": {
+    "contact": "Contact",
+    "help": "Help",
+    "newsletter_heading": "Join our list",
+    "newsletter_subheading": "Gentle product drops, gifting notes, and styling ideas.",
+    "copyright": "All rights reserved.",
+    "email": "Email",
+    "phone": "Phone",
+    "instagram": "Instagram"
+  },
+  "localization": {
+    "language_label": "Language",
+    "country_label": "Market"
+  },
+  "newsletter": {
+    "email": "Email address",
+    "button_label": "Subscribe",
+    "success": "Thanks for subscribing."
+  },
+  "sections": {
+    "featured_products": {
+      "empty": "Choose a collection in the theme editor to show featured products."
+    },
+    "featured_collections": {
+      "empty": "Add collection blocks in the theme editor."
+    },
+    "faq": {
+      "heading": "Frequently asked questions"
+    },
+    "collection": {
+      "sort_by": "Sort by",
+      "empty": "No products found in this collection yet."
+    },
+    "search": {
+      "heading": "Search",
+      "empty": "No results matched your search."
+    },
+    "cart": {
+      "heading": "Your cart",
+      "empty": "Your cart is empty.",
+      "subtotal": "Subtotal",
+      "checkout": "Checkout",
+      "remove": "Remove",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold out",
+      "quantity": "Quantity",
+      "variant": "Variant",
+      "materials": "Materials",
+      "size_guide": "Size guide",
+      "shipping_returns": "Shipping and returns",
+      "care": "Care",
+      "sticky_add_to_cart": "Choose options",
+      "product_details": "Product details",
+      "gift_ready": "Gift ready"
+    }
+  }
+}

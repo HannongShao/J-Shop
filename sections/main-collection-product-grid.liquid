@@ -1,0 +1,55 @@
+{% paginate collection.products by section.settings.products_per_page %}
+  {%- assign selected_sort = collection.sort_by | default: collection.default_sort_by -%}
+  <section class="section-shell">
+    <div class="page-width">
+      <form class="collection-controls" method="get">
+        <label class="field">
+          <span>{{ 'sections.collection.sort_by' | t }}</span>
+          <select name="sort_by" onchange="this.form.submit()">
+            {%- for option in collection.sort_options -%}
+              <option value="{{ option.value }}" {% if option.value == selected_sort %}selected{% endif %}>{{ option.name }}</option>
+            {%- endfor -%}
+          </select>
+        </label>
+      </form>
+
+      {%- if collection.products_count > 0 -%}
+        <div class="grid grid--3">
+          {%- for product in collection.products -%}
+            {% render 'product-card', product_card_product: product %}
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <p>{{ 'sections.collection.empty' | t }}</p>
+      {%- endif -%}
+
+      {%- if paginate.pages > 1 -%}
+        <div class="header__actions" style="justify-content:center; margin-top: var(--space-8);">
+          {%- if paginate.previous -%}
+            <a class="button button--secondary" href="{{ paginate.previous.url }}">{{ 'sections.cart.previous' | t }}</a>
+          {%- endif -%}
+          {%- if paginate.next -%}
+            <a class="button button--secondary" href="{{ paginate.next.url }}">{{ 'sections.cart.next' | t }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Collection product grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "min": 6,
+      "max": 24,
+      "step": 3,
+      "default": 12
+    }
+  ]
+}
+{% endschema %}

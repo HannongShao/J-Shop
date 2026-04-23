@@ -1,0 +1,15 @@
+{%- if settings.enable_locale_selector and localization.available_languages.size > 1 -%}
+  {%- form 'localization', class: 'localization-form' -%}
+    <label class="field">
+      <span>{{ 'localization.language_label' | t }}</span>
+      <select name="locale_code" onchange="this.form.submit()">
+        {%- for language in localization.available_languages -%}
+          <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
+            {{ language.endonym_name | capitalize }}
+          </option>
+        {%- endfor -%}
+      </select>
+    </label>
+  {%- endform -%}
+{%- endif -%}
+

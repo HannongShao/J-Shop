@@ -1,0 +1,81 @@
+{
+  "accessibility": {
+    "skip_to_content": "跳到主要内容"
+  },
+  "general": {
+    "menu": "菜单",
+    "close": "关闭",
+    "search": "搜索",
+    "cart": "购物车",
+    "view_all": "查看全部",
+    "continue_shopping": "继续购物"
+  },
+  "announcement": {
+    "shop_now": "立即选购"
+  },
+  "header": {
+    "tagline_fallback": "适合送礼与日常佩戴的精致珠宝"
+  },
+  "footer": {
+    "contact": "联系方式",
+    "help": "帮助",
+    "newsletter_heading": "加入邮件列表",
+    "newsletter_subheading": "获取新品、送礼灵感与搭配建议。",
+    "copyright": "保留所有权利。",
+    "email": "邮箱",
+    "phone": "电话",
+    "instagram": "Instagram"
+  },
+  "localization": {
+    "language_label": "语言",
+    "country_label": "市场"
+  },
+  "newsletter": {
+    "email": "电子邮箱",
+    "button_label": "订阅",
+    "success": "订阅成功。"
+  },
+  "sections": {
+    "featured_products": {
+      "empty": "请在主题编辑器中选择要展示的系列。"
+    },
+    "featured_collections": {
+      "empty": "请在主题编辑器中添加系列区块。"
+    },
+    "faq": {
+      "heading": "常见问题"
+    },
+    "collection": {
+      "sort_by": "排序方式",
+      "empty": "该系列暂时还没有商品。"
+    },
+    "search": {
+      "heading": "搜索",
+      "empty": "没有找到匹配的结果。"
+    },
+    "cart": {
+      "heading": "购物车",
+      "empty": "购物车还是空的。",
+      "subtotal": "小计",
+      "checkout": "去结账",
+      "remove": "移除",
+      "previous": "上一页",
+      "next": "下一页"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "加入购物车",
+      "sold_out": "已售罄",
+      "quantity": "数量",
+      "variant": "规格",
+      "materials": "材质",
+      "size_guide": "尺寸指南",
+      "shipping_returns": "配送与退换",
+      "care": "保养建议",
+      "sticky_add_to_cart": "选择规格",
+      "product_details": "商品详情",
+      "gift_ready": "礼盒包装"
+    }
+  }
+}

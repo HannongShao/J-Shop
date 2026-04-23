@@ -1,0 +1,49 @@
+<section class="section-shell">
+  <div class="page-width">
+    <div class="section-header">
+      <h1 class="page-title">{{ 'sections.cart.heading' | t }}</h1>
+    </div>
+
+    {%- if cart.item_count == 0 -%}
+      <p>{{ 'sections.cart.empty' | t }}</p>
+      <a class="button button--secondary" href="{{ routes.all_products_collection_url }}">{{ 'general.continue_shopping' | t }}</a>
+    {%- else -%}
+      <div class="cart-items">
+        {%- for item in cart.items -%}
+          <article class="cart-line">
+            <div style="display:flex; gap: var(--space-4); align-items:center;">
+              <a href="{{ item.url }}" style="width: 5rem;">
+                {%- if item.image != blank -%}
+                  {{
+                    item.image
+                    | image_url: width: 300
+                    | image_tag:
+                      widths: '120, 180, 240, 300',
+                      loading: 'lazy',
+                      alt: item.image.alt | default: item.product.title
+                  }}
+                {%- endif -%}
+              </a>
+              <div>
+                <strong><a href="{{ item.url }}">{{ item.product.title }}</a></strong>
+                <div>{{ item.variant.title }}</div>
+                <div>{{ item.final_line_price | money }}</div>
+              </div>
+            </div>
+            <div class="field" style="min-width: 6rem;">
+              <span>{{ 'products.product.quantity' | t }}: {{ item.quantity }}</span>
+              <a href="{{ item.url_to_remove }}">{{ 'sections.cart.remove' | t }}</a>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main cart items"
+}
+{% endschema %}
+

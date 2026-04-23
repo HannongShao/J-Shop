@@ -1,0 +1,43 @@
+<section class="section-shell">
+  <div class="page-width">
+    <div class="section-header">
+      <h1 class="page-title">{{ 'sections.search.heading' | t }}</h1>
+    </div>
+
+    <form class="grid" action="{{ routes.search_url }}" method="get" role="search">
+      <label class="field">
+        <span class="sr-only">{{ 'general.search' | t }}</span>
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search' | t }}">
+      </label>
+      <button class="button button--primary" type="submit">{{ 'general.search' | t }}</button>
+    </form>
+
+    {%- if search.performed -%}
+      {%- if search.results_count > 0 -%}
+        <div class="grid grid--3" style="margin-top: var(--space-8);">
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}
+              {% render 'product-card', product_card_product: item %}
+            {%- else -%}
+              <article class="card">
+                <div class="card__content">
+                  <h2 class="product-card__title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+                  <p class="section-header__text">{{ item.content | strip_html | truncate: 120 }}</p>
+                </div>
+              </article>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <p>{{ 'sections.search.empty' | t }}</p>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main search"
+}
+{% endschema %}
+

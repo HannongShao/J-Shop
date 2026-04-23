@@ -1,0 +1,10 @@
+{%- assign button_style = button_style | default: 'primary' -%}
+{%- if button_url != blank and button_label != blank -%}
+  <a class="button button--{{ button_style }}{% if button_class %} {{ button_class }}{% endif %}" href="{{ button_url }}">
+    <span>{{ button_label }}</span>
+    {%- if button_icon -%}
+      {% render 'icon', icon: button_icon %}
+    {%- endif -%}
+  </a>
+{%- endif -%}
+

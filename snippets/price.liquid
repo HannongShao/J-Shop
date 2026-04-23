@@ -1,0 +1,10 @@
+{%- assign target = price_product | default: product | default: variant -%}
+{%- assign compare_at_price = target.compare_at_price -%}
+{%- assign price = target.price | default: 1999 -%}
+<div class="price{% if compare_at_price > price %} price--sale{% endif %}">
+  <span class="price__regular">{{ price | money }}</span>
+  {%- if compare_at_price > price -%}
+    <span class="price__compare">{{ compare_at_price | money }}</span>
+  {%- endif -%}
+</div>
+

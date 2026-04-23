@@ -1,0 +1,40 @@
+<section class="section-shell">
+  <div class="page-width hero">
+    <div>
+      <p class="section-header__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="page-title">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}
+        <div class="page-copy">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+    <div class="hero__media">
+      {%- if collection.image != blank -%}
+        {{
+          collection.image
+          | image_url: width: 1400
+          | image_tag:
+            widths: '480, 720, 960, 1200, 1400',
+            loading: 'lazy',
+            alt: collection.title
+        }}
+      {%- else -%}
+        {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Curated edits"
+    }
+  ]
+}
+{% endschema %}
+

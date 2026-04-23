@@ -1,0 +1,119 @@
+{
+  "project": {
+    "name": "Southern Light Jewellery",
+    "type": "shopify-theme-plus-preview-and-backend-schema",
+    "updated_at": "2026-04-23"
+  },
+  "surfaces": [
+    {
+      "id": "preview-home",
+      "role": "editorial prototype for homepage design and interaction",
+      "entry_files": {
+        "markup": "preview/index.html",
+        "styles": "preview/preview.css",
+        "behavior": "preview/preview.js"
+      },
+      "canonical_hooks": [
+        "data-component",
+        "data-section-title",
+        "data-nav-key",
+        "data-nav-panel",
+        "data-reveal"
+      ],
+      "edit_order": [
+        "preview/index.html",
+        "preview/preview.css",
+        "preview/preview.js"
+      ]
+    },
+    {
+      "id": "shopify-theme",
+      "role": "production storefront implementation",
+      "entry_files": {
+        "layout": "layout/theme.liquid",
+        "templates_dir": "templates",
+        "sections_dir": "sections",
+        "snippets_dir": "snippets",
+        "assets_dir": "assets",
+        "locales_dir": "locales",
+        "config_dir": "config"
+      },
+      "edit_order": [
+        "layout/theme.liquid",
+        "templates/*",
+        "sections/*",
+        "snippets/*",
+        "assets/*"
+      ]
+    },
+    {
+      "id": "backend-database",
+      "role": "business data source for products, customers, consultations, passports, and aftercare",
+      "entry_files": {
+        "schema": "database/jewelry_catalog_schema.sql",
+        "seed": "database/jewelry_backend_seed.sql",
+        "manual": "database/jewelry_database_management_manual.md",
+        "overview": "database/README.md"
+      },
+      "edit_order": [
+        "database/jewelry_catalog_schema.sql",
+        "database/jewelry_backend_seed.sql",
+        "database/jewelry_database_management_manual.md",
+        "database/README.md"
+      ]
+    }
+  ],
+  "selector_contracts": {
+    "preview": {
+      "component_wrapper": "data-component",
+      "section_label": "data-section-title",
+      "navigation_key": "data-nav-key",
+      "navigation_panel": "data-nav-panel",
+      "reveal_animation": "data-reveal"
+    },
+    "shopify_theme": {
+      "drawer_toggle": "data-drawer-toggle",
+      "drawer_close": "data-drawer-close",
+      "accordion_trigger": "data-accordion-trigger",
+      "product_gallery": "data-product-gallery",
+      "sticky_atc": "data-sticky-atc"
+    }
+  },
+  "behavior_contracts": {
+    "preview_js_shape": [
+      "selector and media-query contracts first",
+      "static content libraries second",
+      "DOM helpers third",
+      "one initializer per feature fourth",
+      "single boot sequence last"
+    ],
+    "theme_js_shape": [
+      "selector map near top of file",
+      "named helpers for shared operations",
+      "one initializer per component family",
+      "direct bootstrap at file end"
+    ]
+  },
+  "backend_mapping": {
+    "shopify_sync_view": "database/jewelry_catalog_schema.sql::vw_shopify_product_custom_data",
+    "admin_views": [
+      "vw_admin_product_overview",
+      "vw_admin_product_care_matrix",
+      "vw_admin_customer_overview",
+      "vw_admin_concierge_queue",
+      "vw_admin_passport_registry",
+      "vw_admin_aftercare_queue"
+    ]
+  },
+  "preferred_edit_paths": {
+    "homepage_layout_or_copy": "preview/* first",
+    "storefront_liquid_output": "sections/* and snippets/*",
+    "customer_or_aftercare_logic": "database/* first"
+  },
+  "avoid": [
+    "Do not assume preview changes are already mirrored into Shopify sections",
+    "Do not hardcode reusable material or care rules into product copy",
+    "Do not add new interaction entry points outside the established boot sequence",
+    "Do not treat internal database notes as front-end content"
+  ]
+}

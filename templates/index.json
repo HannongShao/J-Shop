@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-editorial",
+      "settings": {
+        "eyebrow": "Australian-first everyday jewellery",
+        "heading": "Thoughtfully designed pieces for gifting and daily wear",
+        "text": "<p>Build your first homepage around confidence, gifting ease, and transparent material storytelling.</p>",
+        "primary_label": "Shop best sellers",
+        "secondary_label": "Shop gifts",
+        "note": "Ships from Australia"
+      }
+    },
+    "trust": {
+      "type": "trust-bar",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "heading": "Free shipping over AU$149",
+            "text": "Keep the threshold visible to support basket building."
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "gift",
+            "heading": "Gift-ready packaging",
+            "text": "Use this to sell gifting confidence without sounding generic."
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "sparkle",
+            "heading": "Transparent materials",
+            "text": "Make plating, metal, and stone details easy to trust."
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3"]
+    },
+    "featured_products": {
+      "type": "featured-products",
+      "settings": {
+        "eyebrow": "Best sellers",
+        "heading": "Lead with low-friction hero products",
+        "text": "<p>Select a best-selling or gift-friendly collection in the editor to power this section.</p>",
+        "products_limit": 6
+      }
+    },
+    "featured_collections": {
+      "type": "featured-collections",
+      "settings": {
+        "eyebrow": "Shop by edit",
+        "heading": "Use occasion and price-led browsing to reduce friction"
+      }
+    },
+    "material_story": {
+      "type": "material-story",
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "icon": "sparkle",
+            "heading": "Material language",
+            "text": "Explain what terms like sterling silver or gold vermeil mean for everyday wear."
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "icon": "gift",
+            "heading": "Gifting confidence",
+            "text": "Use structured product details so gift buyers know what they are choosing."
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "icon": "truck",
+            "heading": "Delivery clarity",
+            "text": "Make standard and express expectations visible before checkout."
+          }
+        }
+      },
+      "block_order": ["point_1", "point_2", "point_3"]
+    },
+    "reviews": {
+      "type": "review-strip",
+      "blocks": {
+        "quote_1": {
+          "type": "quote",
+          "settings": {
+            "quote": "Use short, specific review language about quality, comfort, and gifting so this section feels trustworthy.",
+            "author": "Customer review"
+          }
+        },
+        "quote_2": {
+          "type": "quote",
+          "settings": {
+            "quote": "This area works best with real comments that remove hesitation rather than generic praise.",
+            "author": "Gift buyer"
+          }
+        },
+        "quote_3": {
+          "type": "quote",
+          "settings": {
+            "quote": "Once you have reviews, replace all placeholder copy with authentic customer words.",
+            "author": "Repeat customer"
+          }
+        }
+      },
+      "block_order": ["quote_1", "quote_2", "quote_3"]
+    },
+    "newsletter": {
+      "type": "newsletter-signup",
+      "settings": {
+        "eyebrow": "Retention",
+        "heading": "Keep the relationship going after the first visit"
+      }
+    }
+  },
+  "order": ["hero", "trust", "featured_products", "featured_collections", "material_story", "reviews", "newsletter"]
+}
+

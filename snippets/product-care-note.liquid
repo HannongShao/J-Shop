@@ -1,0 +1,11 @@
+{%- capture care_content -%}
+  <div class="page-copy">
+    {%- if product.metafields.custom.care_summary.value != blank -%}
+      <p>{{ product.metafields.custom.care_summary.value }}</p>
+    {%- else -%}
+      <p>Store each piece in a dry pouch and avoid direct contact with perfume, lotion, and water to keep plating and stones looking their best.</p>
+    {%- endif -%}
+  </div>
+{%- endcapture -%}
+{% render 'product-accordion-item', title: 'products.product.care' | t, content: care_content %}
+
